@@ -10,7 +10,7 @@ int main(void)
     TWI_init(&I2C_Config);
 
    /* init of uart */
-    UART_ConfigType UART_Config = {UART_8BIT_MODE, even, UART_ONE_STOP_BIT, 9600};
+    UART_ConfigType UART_Config = {UART_8BIT_MODE, even, UART_ONE_STOP_BIT, 115200};
     UART_init(&UART_Config);
 
     uint8 received_data;
@@ -26,3 +26,4 @@ int main(void)
         UART_sendByte(received_data);
     }
 }
+
